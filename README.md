@@ -69,13 +69,15 @@ npm run test:ui
 ### ✅ Run Individual Test (e.g., Search)
 
 ```bash
-npx playwright test tests/search.test.js
+npx playwright test tests/search.test.js --headed
+npx playwright test tests/cart.test.js --headed
 ```
 
 ### ✅ Run API Test
 
 ```bash
 npm run test:api
+
 ```
 
 ---
@@ -114,12 +116,4 @@ npm run test:api
 - Page Object Model (POM) used for reusable UI methods
 - Modular structure for maintainability and future scalability
 - Headless mode enabled by default (can be disabled for debugging)
-
----
-
-## 🧠 Debug Tips
-
-- Set `headless: false` in `playwright.config.js` to see browser UI
-- Use `npx playwright test --ui` for interactive test runner
-- Use `.first()` or better locators when strict mode issues occur
 
